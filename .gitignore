@@ -1,0 +1,15 @@
+*.bin
+*.json
+*.zip
+*.csv
+*.txt
+*.out
+/sbert_approach/matcher
+/sbert_approach/mlm_weights
+/sbert_approach/tmp_trainer
+/sbert_approach/wandb
+/sbert_approach/__pycache__
+/__pycache__
+/rubert-tiny2
+/rubert-tiny2-price
+/experiments/data
