@@ -44,19 +44,20 @@ def load_model(model_name, pth_tokenizer, max_seq_length):
     return model
 
 if __name__ == "__main__":
-    num_epochs = 80
-    model_name = '/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/all-mpnet-base-v2_50_epochs/2023-07-28_08-35-58/checkpoint-1040000'
-    pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/all-mpnet-base-v2_50_epochs/2023-07-28_08-35-58"
-    dataset_path = "/mnt/vdb1/Datasets/triplets_train.csv"
+    num_epochs = 50
+    model_name = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/2023-07-14_14-52-52/checkpoint-360000"
+    pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/2023-07-14_14-52-52"
+    dataset_path = "/mnt/vdb1/Datasets/triplets_train_aug.csv"
+    # dataset_path = "/mnt/vdb1/Datasets/triplets_train.csv"
     # dataset_path = "/mnt/vdb1/Datasets/triplets_test.csv"
-    model_save_path = '/mnt/vdb1/BERT_training/sbert_approach/matcher/all-mpnet-base-v2_80_epochs'+'-'+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    model_save_path = '/mnt/vdb1/BERT_training/sbert_approach/matcher/rubert-tiny2-aug'+'-'+datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    batch_size_triplets = 50
+    batch_size_triplets = 450
     max_seq_length = 512
     use_amp = True                  #Set to False, if you use a CPU or your GPU does not support FP16 operations
     evaluation_steps = 500
     warmup_steps = 500
-    save_steps = 15000
+    save_steps = 5000
 
     print(f"model_name = {model_name}\npth_tokenizer = {pth_tokenizer}\ndataset_path = {dataset_path}\nmodel_save_path = {model_save_path}\n")
     print(f"num_epochs = {num_epochs}\nbatch_size_triplets = {batch_size_triplets}\nmax_seq_length = {max_seq_length}\nuse_amp = {use_amp}\nevaluation_steps = {evaluation_steps}\nwarmup_steps = {warmup_steps}\nsave_steps = {save_steps}\n\n")
