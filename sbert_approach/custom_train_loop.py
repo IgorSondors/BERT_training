@@ -84,14 +84,16 @@ def train_loop(model_name, pth_tokenizer, model_save_path, dataset_path, device,
             # wandb.save(model_save_path)
 
 if __name__ == "__main__":
-    model_name = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/2023-07-14_14-52-52/checkpoint-360000"
-    pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/2023-07-14_14-52-52"
-    model_save_path = '/mnt/vdb1/BERT_training/sbert_approach/matcher/rubert-tiny2-custom_train_loop'
+    model_name = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories/2023-09-05_16-13-54/checkpoint-700000"
+    pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories/2023-09-05_16-13-54"
+    model_save_path = '/mnt/vdb1/BERT_training/sbert_approach/matcher/rubert-tiny2-18_categories'
 
     # dataset_path = "/mnt/vdb1/Datasets/triplets_train_aug_clear.csv"
     # dataset_path = "/mnt/vdb1/Datasets/triplets_train_aug.csv"
-    dataset_path = "/mnt/vdb1/Datasets/triplets_train.csv"
+    # dataset_path = "/mnt/vdb1/Datasets/triplets_train.csv"
     # dataset_path = "/mnt/vdb1/Datasets/triplets_test.csv"
+
+    dataset_path = "/mnt/vdb1/Datasets/18_categories/triplets_train_4_categories.csv"
 
     device = "cuda"
     num_epochs = 30

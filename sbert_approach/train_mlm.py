@@ -20,11 +20,11 @@ if len(sys.argv) < 3:
     exit()
 
 model_name = sys.argv[1]
-per_device_train_batch_size = 30
+per_device_train_batch_size = 64
 
 save_steps = 20000               #Save model every 1k steps
 num_train_epochs = 50            #Number of epochs
-use_fp16 = False                #Set to True, if your GPU supports FP16 operations
+use_fp16 = True                #Set to True, if your GPU supports FP16 operations
 max_length = 512                #Max length for a text input
 do_whole_word_mask = False       #If set to true, whole words are masked
 mlm_prob = 0.15                 #Probability that a word is replaced by a [MASK] token
@@ -35,7 +35,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)#(model_name)
 
 
 #output_dir = "/mnt/vdb1/BERT_training/sbert_approach/ckpt_concat_unique2/{}-{}".format(model_name.replace("/", "_"),  datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
-fld = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/all-mpnet-base-v2_50_epochs"
+fld = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories"
 output_dir = "{}/{}".format(fld, datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
 
 print("Save checkpoints to:", output_dir)
