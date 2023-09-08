@@ -71,9 +71,11 @@ def load_model(model_name, pth_tokenizer, max_seq_length):
 
 if __name__ == "__main__":
 
-    model_name = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories/2023-09-05_16-13-54/checkpoint-700000"
-    pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories/2023-09-05_16-13-54"
-    model_save_path = '/mnt/vdb1/BERT_training/sbert_approach/matcher/rubert-tiny2-18_categories-fit_loop'
+    # model_name = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories/2023-09-05_16-13-54/checkpoint-700000"
+    # pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories/2023-09-05_16-13-54"
+    model_name = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories_my_tokenizer/2023-09-07_11-13-08/checkpoint-700000"
+    pth_tokenizer = "/mnt/vdb1/BERT_training/sbert_approach/mlm_weights/experiment_part_of_word_masking/18_categories_my_tokenizer/2023-09-07_11-13-08"
+    model_save_path = '/mnt/vdb1/BERT_training/sbert_approach/matcher/rubert-tiny2-18_categories-fit_loop_my_tokenizer'
 
     dataset_path = "/mnt/vdb1/Datasets/18_categories/triplets_train_18_categories.csv"
 

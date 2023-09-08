@@ -4,6 +4,7 @@
 *.csv
 *.txt
 *.out
+*.npy
 /sbert_approach/matcher
 /sbert_approach/mlm_weights
 /sbert_approach/tmp_trainer
